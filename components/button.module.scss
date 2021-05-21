@@ -1,0 +1,27 @@
+@use '../styles/abstracts/vars';
+
+.btn {
+    padding: .5rem 1.5rem;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all .5s;
+    &.primary {
+        background-color: vars.$color_green;
+        color: vars.$color_white;
+        border: 1px solid vars.$color_green;
+        &:hover, &:focus{
+            background-color: black;
+        }
+    }
+    &.secondary {
+        background-color: vars.$color_white;
+        color: vars.$color_green;
+        border: 1px solid vars.$color_green;
+        &:hover, &:focus {
+            background-color: vars.$color_green;
+            color: vars.$color_white;
+        }
+    }
+}

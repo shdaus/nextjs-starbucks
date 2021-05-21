@@ -1,0 +1,17 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
+    &.justify-content-center{
+        justify-content: center;
+    }
+    &.flex-direction-row-reverse{
+        flex-direction: row-reverse;
+    }
+    &.justify-content-space-between{
+        justify-content: space-between;
+    }
+}
+.m1 {
+    margin: 1rem;
+}
