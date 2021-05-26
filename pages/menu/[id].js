@@ -52,7 +52,7 @@ export default function MenuItem({ menuItemData }) {
 
     const { nutritionalData} = menuItemData.nutritionalInformation;
 
-    const { property , value } = nutritionalData;
+    
 
 
     return (
@@ -72,16 +72,25 @@ export default function MenuItem({ menuItemData }) {
             />
             <Heading type="h1">{ title }</Heading>
             <div dangerouslySetInnerHTML={{ __html: content }} />
-            <Row>
+            <Row justifyContentCenter>
                 <Col>
                     ${price}
+                    
                 </Col>
-                <Col>
-                    {property}
-                </Col>
-                <Col>
-                    {value}
-                </Col>
+                {nutritionalData.map((nD) => {
+                    const { property , value} = nD;
+
+                    return <Row justifyContentCenter>
+                            <Col>
+                                {property}
+                            </Col>
+                            <Col>
+                                {value}
+                            </Col>
+                        </Row>
+                    
+                })}
+                
             </Row>
             
         </Layout>

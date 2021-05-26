@@ -13,7 +13,7 @@ export default function Home() {
         <p>Web Developer</p>
         <Button 
           label="View menu"
-          path= "/menu-items" 
+          path= "/menu" 
           type = "primary"
         />
         <Button 
